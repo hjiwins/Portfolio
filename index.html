@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Work+Sans:wght@800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Jiwon Hwang</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="icon-wrap">
+                <div class="icon-image">
+                    <img class="about-image" src="/image/about-icon.png" alt="about icon">
+                </div>
+                <div class="icon-text">
+                    <a class="about-icon" href="#about">
+                        <p class="about-icon-txt">ABOUT</p>
+                    </a>
+                </div>
+            </div>
+            <div class="icon-wrap">
+                <div class="icon-image">
+                    <img class="projects-image" src="/image/project-icon.png" alt="project icon">
+                </div>
+                <div class="icon-text">
+                    <a class="projects-icon" href="#projects">
+                        <p class="projects-icon-txt">PROJECTS</p>
+                    </a>
+                </div>
+            </div>
+            <div class="icon-wrap">
+                <div class="icon-image">
+                    <img class="contact-image" src="/image/contact-icon.png" alt="contact icon">
+                </div>
+                <div class="icon-text">
+                    <a class="contact-icon" href="#cta">
+                        <p class="contact-icon-txt">CONTACT</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="hero">
+            <div class="hero-text">
+                <div class="cta-btns">
+                    <button class="contact-btn">Contact me!</button>
+                    <button class="resume-btn">Download resume</button>
+                </div>
+                <img class="hero-main" src="/image/hero-title.png" alt="Hello World">
+                <h2>Meet the newest <span>Web Developer & Designer</span></h2>
+                <h3>Welcome to the portfolio of Jiwon Hwang</h3>
+            </div>
+        </div>
+        <div id="about">
+            <h1>ABOUT</h1>
+            <div class="about-content">
+                <div class="about-text-left">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolore hic impedit ipsum sequi
+                    placeat aspernatur incidunt laudantium minus quo.
+                </div>
+                <img class="swimming-girl" src="/image/upperbody.png" alt="Swimming">
+                <div class="about-text-right">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolore hic impedit ipsum sequi
+                    placeat aspernatur incidunt laudantium minus quo.
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <h1>PROJECTS</h1>
+            <div class="projects-list">
+                <div class="project">
+                    <a href="#"><img class="project-img" src="/image/about-portrait.jpg" alt=""></a>
+                    <div class="project-text">
+                        <h2>진짜 백종원 레시피 (Youtube API)</h2>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veritatis, ducimus nostrum saepe
+                        velit labore, excepturi autem possimus necessitatibus hic odio error ratione repellat commodi
+                        fugiat quos. Ipsam, maiores explicabo.
+                    </div>
+                </div>
+                <div class="project">
+                    <a href="#"><img class="project-img" src="/image/about-portrait.jpg" alt=""></a>
+                    <div class="project-text">
+                        <h2>도고 데이케어 (웹사이트)</h2>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nulla ad optio soluta dicta
+                        blanditiis deleniti impedit, vitae reprehenderit quisquam commodi, doloribus, atque facere
+                        cumque deserunt architecto dolores obcaecati possimus.
+                    </div>
+                </div>
+                <div class="project">
+                    <a href="#"><img class="project-img" src="/image/about-portrait.jpg" alt=""></a>
+                    <div class="project-text">
+                        <h2>산성비 (자바스크립트 게임)</h2>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum nulla quas vel expedita
+                        voluptatum, esse provident est ad? Dignissimos odio molestias blanditiis veritatis explicabo
+                        harum eius doloremque dolor reprehenderit non?
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="leaf-wrap">
+                <img class="leaf-left" src="/image/leaf.png" alt="leaf">
+                <img class="leaf-middle" src="/image/leaf.png" alt="leaf">
+                <img class="leaf-right" src="/image/leaf.png" alt="leaf">
+            </div> -->
+        </div>
+        <div id="cta">
+            <div class="orange-wrap">
+                <img class="orange-left" src="/image/orange-left.png" alt="orange">
+                <img class="orange-middle" src="/image/orange-middle.png" alt="orange">
+                <img class="orange-right" src="/image/orange-right.png" alt="orange">
+            </div>
+            <h1>SAY HELLO</h1>
+            <!-- <img class="cta-title big-titles" src="/image/cta-title.png" alt="call to action"> -->
+            <ul>
+                <a href="#">
+                    <li>Send an E-mail</li>
+                </a>
+                <a href="#">
+                    <li>Download resume</li>
+                </a>
+            </ul>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+    <!-- Scroll Magic -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+    <!-- GSAP & Scroll Magic Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --point-pink: #ff9292;
+    --bg-pink: #ffe8e8;
+    --point-blue: #7085b0;
+    --bg-blue: #aac0ef;
+    --point-green: #52734d;
+    --bg-green: #ddffbc;
+    --point-orange: #ffab73;
+    --bg-orange: #ffd384;
+
+    --main-font: 'Roboto Condensed', sans-serif;
+    --title-font: 'Work Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 10vw;
+    min-width: 200px;
+    height: 100vh;
+    background-color: var(--point-pink);
+    transition: .3s ease;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+}
+
+nav p {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-decoration: none;
+    color: white;
+    font-family: var(--main-font);
+}
+
+nav img {
+    position: relative;
+    z-index: -2;
+    transition: .5s all ease;
+}
+
+.icon-wrap {
+    width: 100%;
+    position: relative;
+    margin: 0.5rem 0;
+}
+
+.icon-text a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#hero {
+    position: relative;
+    height: 100vh;
+    text-align: left;
+    background-color: var(--bg-pink);
+    background-image: url(/image/portfolio-ideas-03.svg);
+    background-size: 50%;
+    margin-left: 10vw;
+}
+
+.hero-main {
+    width: 40vw;
+    margin: 2rem 0;
+}
+
+.hero-text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 5%;
+    color: var(--point-pink);
+    z-index: 3;
+    font-family: var(--main-font);
+    white-space: nowrap;
+}
+
+.cta-btns button {
+    display: inline-block;
+    background-color: var(--point-pink);
+    border-style: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: .9rem;
+    color: white;
+}
+
+#about {
+    position: relative;
+    height: 100vh;
+    margin-left: 10vw;
+    padding: 5%;
+    background-color: var(--bg-blue);
+}
+
+#about h1 {
+    font-family: var(--title-font);
+    font-size: 8rem;
+    color: #f4f9f9;
+    text-shadow: -8px 0px 0px #b2bfd4, -16px 0px 0px #7085b0;
+}
+
+.about-title {
+    width: 30%;
+}
+
+.about-content {
+    width: 100%;
+    height: 100%;
+    color: #f4f9f9;
+    font-size: 3rem;
+    position: relative;
+}
+
+.about-text-left {
+    float: left;
+    text-align: right;
+    width: 40%;
+    transform: translateX(25%);
+}
+
+.about-text-right {
+    float: right;
+    text-align: left;
+    width: 40%;
+    transform: translateX(-25%);
+}
+
+.swimming-girl {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    bottom: 0;
+    width: 25%;
+    min-width: 300px;
+}
+
+#projects {
+    overflow: hidden;
+    position: relative;
+    margin-left: 10vw;
+    min-height: 100vh;
+    background-color: var(--bg-green);
+}
+
+#projects h1 {
+    font-family: var(--title-font);
+    font-size: 8rem;
+    color: #feffde;
+    text-shadow: -8px 0px 0px #a8b996, -16px 0px 0px #52734d;    
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    margin: 1% 3%;
+}
+
+.projects-list {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.project {
+    flex: 1 1 300px;
+    margin: 0 1rem;
+}
+
+.project-img {
+    opacity: 0;
+    transform: translateY(100px);
+    border-radius: 50%;
+    width: 70%;
+    cursor: pointer;
+}
+
+.project-img:hover {
+    filter: grayscale(80%);
+}
+
+.project-text {
+    opacity: 0;
+    transform: translateY(100px);
+    margin-top: 1rem;
+    color: var(--point-green);
+}
+
+#cta {
+    margin-left: 10vw;
+    min-height: 100vh;
+    background-color: var(--bg-orange);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    flex-direction: column;
+}
+
+#cta ul {
+    list-style: none;
+    position: relative
+}
+
+#cta ul li:hover {
+    background-color: darkorange;
+}
+
+#cta ul li {
+    background-color: var(--point-orange);
+    color: whitesmoke;
+    font-family: var(--main-font);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    white-space: nowrap;
+}
+
+#cta h1 {
+    font-family: var(--title-font);
+    font-size: 10rem;
+    color: #fff9b0;
+    text-shadow: 5px 5px 0px #ffd292, 10px 10px 0px #ffab73;
+}
+
+.orange-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.orange-left {
+    width: 8%;
+    margin: .5rem;
+    transform: translateX(-1000px);
+}
+
+.orange-middle {
+    width: 8%;
+    margin: .5rem;
+}
+
+.orange-right {
+    width: 8%;
+    margin: .5rem;
+}
+
+
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+
+    .hero-main {
+        width: 90%;
+    } 
+
+    .leaf-wrap {
+        flex-direction: column;
+        justify-content: center;
+        place-items: center;
+        overflow: visible;
+    }
+
+    .leaf-left {
+        transform: rotate(90deg);
+    }
+
+    .leaf-middle {
+        transform: rotate(270deg);
+    }
+
+    .leaf-right {
+        transform: rotate(90deg);
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* start of medium tablet styles */
+    .hero-main {
+        width: 90%;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 10vh;
+        background-color: var(--point-pink);
+        transition: .5s ease;
+    }
+
+    nav {
+        width: 50%;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: center;
+        place-items: center;
+    }
+
+    .project-img {
+        border-radius: 0;
+        width: 80%;
+        cursor: pointer;
+    }
+
+    #cta ul li {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+        margin: 1rem;
+        white-space: nowrap;
+    }
+
+    #hero,
+    #about,
+    #projects,
+    #cta {
+        margin-left: 0;
+        padding-top: 15vh;
+    }
+
+    #cta h1 {
+        font-size: 7rem;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+    /* start of phone styles */
+    .hero-text {
+        bottom: 40%;
+        font-size: 0.8rem;
+    }
+
+    .about-text-left {
+        font-size: 2rem;
+    }
+
+    .about-text-right {
+        font-size: 2rem;
+    }
+
+    #cta h1 {
+        font-size: 3rem;
+    }
+}
