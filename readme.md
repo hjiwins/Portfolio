@@ -1,34 +1,22 @@
 <!-- heading -->
 
-# 🤗 안녕하세요! 
-***웹 개발자 & 디자이너**가 되고 싶은 지원이예요.*
-어릴때부터 그림과 디자인에 관심이 많았지만 분야를 일찍 정하지 못하고 방황하다가 오랜 길을 돌아서 여기까지 오게 되었어요. 시간이 걸린 만큼 배우고자 하는 의욕이 충만하고 내가 진짜 하고싶은 일을 찾는 것의 소중함도 잘 알고 있어요.*(이제는 더이상 고민하지 않을거예요!!)* 저는 일본어와 영어를 할 수 있고, 다양한 분야에서 여러 사람들과 함께 일해봤기 때문에 업무적으로 금방 적응할 거예요.
-
-# Hello!
-My name is Jiwon (You can also call me "G1"😉) who loves web development and design. I have a lot of interest about **art** and **design** since when I was a child but took a little more time to find right path. with a lot of thought and concern, I made my mind up that I will become a developer who are capable to do good design! I have many work experience in a various industries and countries so I will be adopted in the new environment fast.
-
-# こんにちは！
-ウェブ開発とデザインが大好きなジウォンです。昔から美術やデザインが好きで日本語も専攻しましたか、ハッキリとした道を見つけられず、ちょっと遠回りしてここまで来ました。これからは誰よりも頑張って勉強してデザインもできるウェブ開発者になりたいです。色んな分野で働いた経験もあるので、人との関係や仕事に素早く適応できると思います。
-
----
+# Portfolio - Jiwon Hwang
 
 <!-- List -->
-## 1. 알고 있는 언어
-* Korean (Navive)
-* Japanese (Majored)
-* English
+## 1. 제작 의도
+본 포트폴리오는 웹개발 기본 기술을 이용하여 라이브러리 없이 Pure HTML, CSS, JavaScript를 사용하여 제작하였습니다.
+Mobile-first로 제작 하였으며 라이브러리에 의존하지 않기 위해 CSS의 scroll-snap을 사용해 보았습니다. 최대한 심플하고 부드럽게 제작하는 것을 가장 중요하게 생각했으며, 포트폴리오 내의 벡터 이미지들을 일러스트레이터로 직접 제작하였습니다.
 
-## 2. 배우고 있는 언어
-* HTML
-* CSS (SCSS)
-* JavaScript
+## 2. 세부 프로젝트 소개
+**1. 리얼 백종원 레시피**
+  이 프로젝트는 Youtube API 사용 연습을 위해 기획하였습니다. 저는 요리를 즐겨하는데 블로그에는 변형된 레시피들이 많이 존재하고 진짜 백종원 레시피를 찾으려면 공식 유튜브에 들어가서 비디오를 검색해서 봐야하는 불편함이 있어 간편하게 공식 유튜브 사이트에서 백종원의 레시피만 빠르게 검색할 수 있도록 제작해 보았습니다.
+**2. 산성비**
+  어릴때 즐겨 했던 산성비라는 게임을 자바스크립트로 구현해보았습니다. 본 프로젝트를 진행하면서 자바스크립트를 더 잘 이해할 수 있었고, 
+**3. 도고 데이케어**
+  이 프로젝트는 single page 프로젝트로 CSS를 더 자유자재로 구현해보고자 시작하게 되었습니다. 본 프로젝트를 진행하며 flex, grid시스템에 대해 더 깊게 이해하게 되었고 CSS작성시 발생할 수 있는 문제점을 해결하는 방법을 공부할 수 있었습니다.
 
-## 3. 관심있는 라이브러리
-* Node.js
-* React
-
-## 4. Favofite tools
-- VS Code
-- Git
-- Adobe Photoshop, Illustrator and XD
+## 3. 사용 언어
+- HTML
+- CSS
+- JavaScript
 
