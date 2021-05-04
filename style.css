@@ -2,10 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 :root {
-    --point-pink: #ff9292;
+    --point-pink: #fd8383;
     --bg-pink: #ffe8e8;
     --point-blue: #7085b0;
     --bg-blue: #aac0ef;
@@ -363,8 +364,18 @@ nav img {
 @media screen and (max-width: 479px) {
 
     /* start of phone styles */
+    #hero {
+        position: relative;
+        height: 100vh;
+        text-align: left;
+        background-color: var(--bg-pink);
+        background-image: url(/image/portfolio-ideas-03.svg);
+        background-size: 100%;
+        margin-left: 0;
+    }
+
     .hero-text {
-        bottom: 40%;
+        bottom: 20%;
         font-size: 0.8rem;
     }
 

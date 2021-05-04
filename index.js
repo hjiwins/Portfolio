@@ -1,172 +1,106 @@
-const nav = document.querySelector("header");
-const hero = document.getElementById("hero")
-const about = document.getElementById("about");
-const projects = document.getElementById("projects");
-const cta = document.getElementById("cta");
+//NAV ICONS
+const iconImages = document.querySelectorAll(".icon-image img");
+const iconText = document.querySelectorAll(".icon-text a");
+const about = document.querySelector(".about-icon-txt");
 
-//Nav color change
-const navController = new ScrollMagic.Controller();
-
-const heroNavBg = new ScrollMagic.Scene({
-    triggerElement: "#hero",
-})
-.setTween(nav, .1, {backgroundColor: "var(--point-pink"})
-.addIndicators({name: "hero"})
-.addTo(navController)
-
-const aboutNavBg = new ScrollMagic.Scene({
-    triggerElement: "#about",
-})
-.setTween(nav, .3, {backgroundColor: "var(--point-blue"})
-.addIndicators({name: "about", indent: 100})
-.addTo(navController)
-
-const projectsNavBg = new ScrollMagic.Scene({
-    triggerElement: "#projects",
-})
-.setTween(nav, .3, {backgroundColor: "var(--point-green"})
-.addIndicators({name: "projects", indent: 200})
-.addTo(navController)
-
-const contactNavBg = new ScrollMagic.Scene({
-    triggerElement: "#cta",
-})
-.setTween(nav, .3, {backgroundColor: "var(--point-orange"})
-.addIndicators({name: "contact"})
-.addTo(navController)
-
-//change Nav icon's background color
-function iconBgColor(navColor) {
-  const textBlock = document.querySelectorAll(".icon-text");
-  textBlock.forEach((icon) => {
-    icon.style.backgroundColor = navColor;
+iconImages.forEach((icon) => {
+  icon.addEventListener("mouseover", (e) => {
+    let textItem = document.querySelector(`.${e.target.classList[0]}-txt`);
+    textItem.classList.add("appear");
+    e.target.classList.add("dissappear");
   });
-}
-
-//Page pinning
-const slideController = new ScrollMagic.Controller({
-    globalSceneOptions: {
-        triggerHook: 'onLeave',
-        duration: "200%"
-    }
-});
-// get all slides
-const slides = [hero, about, projects];
-// create scene for every slide
-for (var i=0; i<slides.length; i++) {
-    console.log(slides[i]);
-    new ScrollMagic.Scene({
-            triggerElement: slides[i],
-            duration: 300
-        })
-        .setPin(slides[i])
-        //.addIndicators({name: `slide${i+1}`})
-        .addTo(slideController);
-}
-
-//About girl swimming forward
-const swimmingTl = gsap.timeline();
-swimmingTl.to (".about-text-left", {x: 0, duration: 2})
-swimmingTl.to (".about-text-right", {x: 0, duration: 2}, "-=2")
-swimmingTl.to (".swimming-girl", {y: 0, duration: 3}, "-=2")
-
-const swimmingScroll = new ScrollMagic.Controller();
-const swimForward = new ScrollMagic.Scene({
-    triggerElement: "#about",
-    triggerHook: 0.3,
-})
-.setTween(swimmingTl)
-.addIndicators({name: "swim", indent: 200})
-.addTo(swimmingScroll);
-
-//Project show up
-const projectTl = gsap.timeline();
-projectTl.to(".project-img", {y: 0, opacity: 1, duration: 2, stagger: .7})
-projectTl.to(".project-text", {y: 0, opacity: 1, duration: 2, stagger: .7}, "-=3")
-
-const projectScroll = new ScrollMagic.Controller();
-const projectAppear = new ScrollMagic.Scene({
-    triggerElement: "#projects",
-    offset: 300
-})
-.setTween(projectTl)
-.addIndicators({name: "project", indent: 200})
-.addTo(projectScroll);
-
-//Contact orange rolling
-const orangeRollController = new ScrollMagic.Controller();
-const orangeRolling = new ScrollMagic.Scene({
-    triggerElement: "#cta",
-    triggerHook: 0.5,
-})
-.setTween(".orange-left", {x: 0, rotate: 360*4, duration: 3})
-//.addIndicators({name: "orange", indent: 200})
-.addTo(orangeRollController);
-
-//Nav button effects
-const navBtns = document.querySelectorAll(".icon-text a");
-const aboutFont = document.querySelector(".about-font");
-const projectsFont = document.querySelector(".projects-font");
-const contactFont = document.querySelector(".contact-font");
-
-navBtns.forEach((btn) => {
-  btn.addEventListener("mouseenter", (event) => {
-    const icon = event.target.className;
-    const tl = gsap.timeline();
-    switch (icon) {
-      case "about-icon":
-        tl.to(".about-image", { opacity: 0, scale: 0, duration: 0.2 });
-        tl.to(".about-icon-txt", { opacity: 1, duration: 0.5 });
-        break;
-      case "projects-icon":
-        tl.to(".projects-image", { opacity: 0, scale: 0, duration: 0.2 });
-        tl.to(".projects-icon-txt", { opacity: 1, duration: 0.5 });
-        break;
-      case "contact-icon":
-        tl.to(".contact-image", { opacity: 0, scale: 0, duration: 0.2 });
-        tl.to(".contact-icon-txt", { opacity: 1, duration: 0.5 });
-        break;
-      default:
-        break;
-    }
+  icon.addEventListener("mouseleave", (e) => {
+    let textItem = document.querySelector(`.${e.target.classList[0]}-txt`);
+    textItem.classList.toggle("appear");
+    e.target.classList.remove("dissappear");
+  });
+  icon.addEventListener("click", (e) => {
+    let textItem = document.querySelector(`.${e.target.classList[0]}-txt`);
+    textItem.style.opacity = 0;
+    e.target.classList.remove("dissappear");
   });
 });
 
-navBtns.forEach((btn) => {
-  btn.addEventListener("mouseout", (event) => {
-    let icon = event.target.className;
-    const tl = gsap.timeline();
-    switch (icon) {
-      case "about-icon":
-        tl.to(".about-image", { opacity: 1, scale: 1, duration: 0.5 });
-        tl.to(".about-icon-txt", { opacity: 0, duration: 0.3 });
-        isStillThere();
-        break;
-      case "projects-icon":
-        tl.to(".projects-image", { opacity: 1, scale: 1, duration: 0.3 });
-        tl.to(".projects-icon-txt", { opacity: 0, duration: 0.3 });
-        isStillThere();
-        break;
-      case "contact-icon":
-        tl.to(".contact-image", { opacity: 1, scale: 1, duration: 0.3 });
-        tl.to(".contact-icon-txt", { opacity: 0, duration: 0.3 });
-        isStillThere();
-        break;
-      default:
-        break;
-    }
-  });
- 
+//NAV COLOR
+const heroSlide = document.getElementById("hero");
+const aboutSlide = document.getElementById("about");
+const projectsSlide = document.getElementById("projects");
+const ctaSlide = document.getElementById("cta");
+const allSlides = [heroSlide, aboutSlide, projectsSlide, ctaSlide];
+
+const header = document.querySelector("header");
+
+const mainWrap = document.querySelector("main");
+mainWrap.addEventListener("scroll", () => {
+  let scrollPos = window.scrollY;
+  console.log(this.scrollY);
+
+  if (heroSlide.getBoundingClientRect().top === 0) {
+    header.style.backgroundColor = "var(--point-pink)";
+  }
+  if (aboutSlide.getBoundingClientRect().top === 0) {
+    header.style.backgroundColor = "var(--point-blue)";
+    swimmingAni();
+  }
+  if (projectsSlide.getBoundingClientRect().top === 0) {
+    header.style.backgroundColor = "var(--point-green)";
+  }
+  if (ctaSlide.getBoundingClientRect().top < 1) {
+    header.style.backgroundColor = "var(--point-orange)";
+  }
+
+  // if (scrollPos === 0 || scrollPos < aboutSlide.offsetTop - 20) {
+  //   header.style.backgroundColor = "var(--point-pink)";
+  // }
+  // if (scrollPos > aboutSlide.offsetTop - 20) {
+  //   header.style.backgroundColor = "var(--point-blue)";
+  //   swimmingAni();
+  // }
+  // if (scrollPos > projectsSlide.offsetTop) {
+  //   header.style.backgroundColor = "var(--point-green)";
+  // }
+  // if (scrollPos > ctaSlide.offsetTop - 20) {
+  //   header.style.backgroundColor = "var(--point-orange)";
+  //   orangeAni();
+  // }
 });
 
-function isStillThere() {
-    const iconText = document.querySelectorAll(".icon-text");
-    iconText.forEach((icon) => {
-        console.log(icon);
-        if (icon.style.opacity === 1) {
-            icon.style.opacity = 0;
-        }
-    });
+//HERO TEXT
+const jobTitle = ["Developer", "Designer", "Creater", "Artist"];
+const span = document.querySelector(".hero-text span");
+let index = 0;
+
+setInterval(titleShuffle, 3000);
+
+function titleShuffle() {
+  span.innerText = jobTitle[index];
+  index++;
+  if (index > jobTitle.length - 1) {
+    index = 0;
+  }
 }
 
+//SLIDE ANIMATION
+const aboutWrap = document.querySelector(".about-content")
+const textLeft = document.querySelector(".about-text-left");
+const textRight = document.querySelector(".about-text-right");
+const swimmingGirl = document.querySelector(".swimming-girl");
+function swimmingAni() {
+  if (window.innerWidth > 991) {
+    aboutWrap.style.opacity = 1
+    swimmingGirl.style.animation = "swim-vertical 4s -1s forwards 1";
+    textLeft.style.transform = "translateX(-20vh)";
+    textLeft.style.transition = "2s";
+    textRight.style.transform = "translateX(20vh)";
+    textRight.style.transition = "2s";
+  } else {
+    aboutWrap.style.opacity = 1
+    swimmingGirl.style.animation = "swim-horizontal 4s -1s forwards 1";
+    textLeft.style.transform = "translateY(-15vh)";
+    textLeft.style.transition = "2s";
+    textRight.style.transform = "translateY(15vh)";
+    textRight.style.transition = "2s";
+  }
+}
 
+function orangeAni() {}
