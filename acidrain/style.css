@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+:root {
+    --main-font: 'Original Surfer', cursive;
+    --sub-font: 'Open Sans Condensed', sans-serif;
+    --user-bg: rgb(131, 195, 147);
+}
+
+.start-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    background-image: url(./start-bg.jpg);
+    background-color: thistle;
+    font-family: var(--main-font);
+}
+
+.start-wrap p {
+    margin-bottom: 1rem;
+    font-family: var(--sub-font);
+    font-size: 1.5rem;
+}
+
+.start-wrap button {
+    cursor: pointer;
+    padding: 1rem;
+    border-style: none;
+    font-size: 2rem;
+    border-radius: 15px;
+    background-color: rgb(248, 125, 172);
+    color: whitesmoke;
+    text-shadow: rgb(93, 90, 90) 4px 3px 0px;
+    box-shadow: 11px 7px 10px 0px rgba(0,0,0,0.3);
+}
+
+.game-wrap {
+    visibility: hidden;
+}
+
+.sky-wrap {
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(209, 228, 227);
+}
+
+.sky-wrap img {
+    position: absolute;
+    top: -150px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+
+}
+
+.game-area {
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    position: relative;
+    background-color: mintcream;
+}
+
+.rain-drop {
+    position: absolute;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+.user-area {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    background-color: var(--user-bg);
+}
+
+.water {
+    position: absolute;
+    top: -4rem;
+    background-image: url("./water-wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 5rem;
+}
+
+.user-area form {
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+
+    background-color: var(--user-bg);
+    padding: 1rem;
+}
+
+.user-area button {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .5rem;
+    border: none;
+    background-color: rgb(248, 184, 80);
+}
+
+.user-input {
+    border: solid 10px rgb(248, 184, 80);
+    font-size: 1.5rem;
+}
+
+.score-board {
+    width: 100%;
+    background-color: var(--user-bg);
+    font-family: var(--main-font);
+}
+
+.level {
+    padding-top: 1.5rem;
+}
+
+/* @keyframes falls {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+} */

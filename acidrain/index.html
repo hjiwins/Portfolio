@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acid Rain</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="start-wrap">
+        <h1>Acid Rain</h1>
+        <p>~Typing game~</p>
+        <button id="start-btn" onclick="gameStart()">START</button>
+    </div>
+    <section class="game-wrap">
+        <div class="sky-wrap">
+            <img src="clouds.png" alt="clouds">
+            <div class="game-area"></div>
+        </div>
+        <div class="user-area">
+            <div class="water"></div>
+            <form action="">
+                <input class="user-input" type="text" autofocus>
+                <button id="enter-btn" type="submit">⏎</button>
+            </form>
+            <div class="score-board">
+                <div class="level">
+                    <h2>Level: <span class="level-num">1</span></h2>
+                </div>
+                <div class="score">
+                    <h2>Score: <span class="score-num">0</span></h2>
+                </div>
+                <button id="restart-btn" onclick="restart()">RESTART</button>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
